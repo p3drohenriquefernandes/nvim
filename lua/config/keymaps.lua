@@ -33,7 +33,8 @@ vim.keymap.set('n', '<C-h>', '<C-w>h', { silent = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { silent = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { silent = true })
-vim.keymap.set('n', '<C-s>', ':w<CR>', { silent = true })
-vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { silent = true })  -- save in insert mode
-vim.keymap.set('n', '<C-q>', ':q<CR>', { silent = true })
-vim.keymap.set('i', '<C-q>', '<Esc>:q<CR>', { silent = true })  -- quit in insert mode
+vim.keymap.set('n', '<C-s>', ':w<cr>', { silent = true })
+vim.keymap.set('i', '<C-s>', '<Esc>:w<cr>a', { silent = true })
+vim.keymap.set('n', '<C-q>', ':q<cr>', { silent = true })
+vim.keymap.set('i', '<C-q>', '<Esc>:q<cr>', { silent = true })
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>")
