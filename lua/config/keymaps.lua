@@ -29,3 +29,11 @@ vim.keymap.set("n", "sj", "<C-w>j")
 vim.keymap.set("n", "sl", "<C-w>l")
 vim.keymap.set("n", "+", "<C-a>")
 vim.keymap.set("n", "-", "<C-x>")
+vim.keymap.set('n', '<C-h>', '<C-w>h', { silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { silent = true })
+vim.keymap.set('n', '<C-s>', ':w<CR>', { silent = true })
+vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a', { silent = true })  -- save in insert mode
+vim.keymap.set('n', '<C-q>', ':q<CR>', { silent = true })
+vim.keymap.set('i', '<C-q>', '<Esc>:q<CR>', { silent = true })  -- quit in insert mode
