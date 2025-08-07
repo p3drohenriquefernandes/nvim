@@ -1,4 +1,17 @@
-local builtin = require("telescope.builtin")
+local telescope = require "telescope"
+
+telescope.setup {
+	extensions = {
+		["ui-select"] = {
+			require("telescope.themes").get_dropdown(),
+		},
+	},
+}
+
+pcall(telescope.load_extension, "fzf")
+pcall(telescope.load_extension, "ui-select")
+
+local builtin = require "telescope.builtin"
 
 vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
