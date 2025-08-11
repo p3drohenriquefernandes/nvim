@@ -123,6 +123,7 @@ return {
 
     vim.list_extend(ensure_installed, {
       'stylua',
+      'google-java-format',
     })
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
