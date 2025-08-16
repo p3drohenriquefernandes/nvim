@@ -21,18 +21,20 @@ return {
   --- @type blink.cmp.Config
   opts = {
     keymap = {
-      preset = 'default',
+      preset = 'none',
       ['<Esc>'] = { 'hide', 'fallback' },
       ['<C-Space>'] = { 'show' },
       ['<C-e>'] = { 'hide' },
       ['<CR>'] = { 'accept', 'fallback' },
-      ['<Tab>'] = { 'select_next' },
-      ['<S-Tab>'] = { 'select_prev' },
+      ['<C-y>'] = { 'accept', 'fallback' },
+      ['<C-n>'] = { 'select_next', 'fallback' },
+      ['<C-p>'] = { 'select_prev', 'fallback' },
+      ['<Tab>'] = { 'select_next', 'fallback' },
+      ['<S-Tab>'] = { 'select_prev', 'fallback' },
       ['<C-h>'] = { 'snippet_backward' },
       ['<C-l>'] = { 'snippet_forward' },
       ['<C-e>'] = { 'hide_documentation' },
       ['<C-k>'] = { 'show_documentation' },
-      ['<C-i>'] = { 'show_signature' },
     },
 
     appearance = {
