@@ -32,6 +32,7 @@ return {
       ['<C-l>'] = { 'snippet_forward' },
       ['<C-e>'] = { 'hide_documentation' },
       ['<C-k>'] = { 'show_documentation' },
+      ['<C-i>'] = { 'show_signature' },
     },
 
     appearance = {
