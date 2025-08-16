@@ -1,19 +1,16 @@
 local functions = require 'config.functions'
 
-vim.keymap.set('n', '<localleader>rl', functions.toggle_relative_numbers, { desc = 'Toggle [R]elative [L]ine numbering on/off' })
-vim.keymap.set('n', '<localleader>l', functions.toggle_numbers, { desc = 'Toggle [L]ine numbering on/off' })
+-- vim.keymap.set('n', '<localleader>rl', functions.toggle_relative_numbers, { desc = 'Toggle [R]elative [L]ine numbering on/off' })
+-- vim.keymap.set('n', '<localleader>l', functions.toggle_numbers, { desc = 'Toggle [L]ine numbering on/off' })
 
-vim.keymap.set('n', '<localleader>wo', function()
-  ---@type boolean
-  local global = false
-  functions.toggle_wrap(global)
-end, { desc = 'Toggle word [W]rap on/off (window only)' })
-
-vim.keymap.set('n', '<localleader>ww', function()
+local toggle_wrap = function()
   ---@type boolean
   local global = true
   functions.toggle_wrap(global)
-end, { desc = 'Toggle word wrap on/off' })
+end
+
+vim.keymap.set('n', '<M-z>', toggle_wrap, { desc = 'Toggle word wrap on/off' })
+vim.keymap.set('i', '<M-z>', toggle_wrap, { desc = 'Toggle word wrap on/off' })
 
 vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<cr>')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
