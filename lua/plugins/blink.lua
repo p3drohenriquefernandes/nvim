@@ -22,7 +22,6 @@ return {
   opts = {
     keymap = {
       preset = 'none',
-      ['<Esc>'] = { 'hide', 'fallback' },
       ['<C-Space>'] = { 'show' },
       ['<C-e>'] = { 'hide' },
       ['<CR>'] = { 'accept', 'fallback' },
